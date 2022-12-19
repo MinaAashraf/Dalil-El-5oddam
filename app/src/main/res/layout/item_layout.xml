@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="khadem"
+            type="com.ma.development.a5oddam_archieve_app.domain.model.Khadem" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:layoutDirection="rtl"
+        app:cardElevation="1dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_5sdp">
+
+
+            <ImageButton
+                android:id="@+id/call_icon"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:scaleType="centerCrop"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_baseline_local_phone_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_margin="@dimen/_3sdp"
+                app:layout_constraintTop_toTopOf="@id/name_tv"
+                app:tint="@color/red" />
+
+
+            <TextView
+                android:id="@+id/name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/changa_regular"
+                android:text="@{khadem.name}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/phone_tv"
+                phone="@{khadem.phone}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/changa_regular"
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintStart_toStartOf="@id/name_tv"
+                app:layout_constraintTop_toBottomOf="@id/name_tv" />
+
+
+            <TextView
+                android:id="@+id/phone2_tv"
+                phone="@{khadem.phone2}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:fontFamily="@font/changa_regular"
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintStart_toEndOf="@id/phone_tv"
+                app:layout_constraintTop_toTopOf="@id/phone_tv" />
+
+
+            <TextView
+                android:id="@+id/birth_date_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/changa_regular"
+                android:text="@{khadem.birthDate}"
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+            <TextView
+                android:id="@+id/resamaDateTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/changa_regular"
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/_11ssp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                android:text="@string/resama_date_label"
+                titleVisibility = "@{khadem.resamaDate}"
+                app:layout_constraintStart_toStartOf="@id/name_tv"
+                app:layout_constraintTop_toBottomOf="@id/phone_tv" />
+
+
+            <TextView
+                android:id="@+id/resamaDate"
+                resamaDate="@{khadem.resamaDate}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/changa_regular"
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/_11ssp"
+                android:visibility="gone"
+                android:layout_marginStart="@dimen/_3sdp"
+                app:layout_constraintStart_toEndOf="@id/resamaDateTitle"
+                app:layout_constraintTop_toBottomOf="@id/phone_tv" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

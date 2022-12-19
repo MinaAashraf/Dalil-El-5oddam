@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">دليل الخدام</string>
+    <string name="khadem_database_name">khadem_database</string>
+    <string name="search_hint">بحث بالاسم ..</string>
+    <string name="choose_phone_label">اختار الرقم الاول او الثاني:</string>
+    <string name="internet_error_message">تأكد من الاتصال بالانترنت</string>
+    <string name="resama_date_label">تاريخ الرسامة</string>
+    <string name="not_exist_label">لا يوجد</string>
+</resources>

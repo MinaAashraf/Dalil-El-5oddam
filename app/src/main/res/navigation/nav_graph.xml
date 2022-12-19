@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/khoddamListFragment">
+
+    <fragment
+        android:id="@+id/khoddamListFragment"
+        android:name="com.ma.development.a5oddam_archieve_app.presentation.fragments.koddamlist.KhoddamListFragment"
+        android:label="KhoddamListFragment" >
+        <action
+            android:id="@+id/action_khoddamListFragment_to_birthDateFragment"
+            app:destination="@id/birthDateFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/birthDateFragment"
+        android:name="com.ma.development.a5oddam_archieve_app.presentation.fragments.birthday.BirthDateFragment"
+        android:label="BirthDateFragment" />
+</navigation>
